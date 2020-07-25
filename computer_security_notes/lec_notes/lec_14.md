@@ -1,6 +1,6 @@
 today: DNS (domain name $\rightarrow$ IP)
 
-DNS lookup: we ask resolver (local DNS server) for eecs.berkeley.edu: resolver asks root DNS server. roots directs resolver to .edu DNS server. root asks .edu server, gets directed to berkeley.edu DNS server. and so on. cache heavily for speed.
+DNS lookup: we ask resolver (local DNS server) for eecs.berkeley.edu: resolver asks root DNS server. roots directs resolver to .edu DNS server. resolver asks .edu server, gets directed to berkeley.edu DNS server. and so on. cache heavily for speed (reason we use resolvers instead of our own computers is the benefit of caching other users' lookups).
 
 - a few dozen root DNS servers spread around the world
 - backwards hierachy (www.google.com subdomain of google.com!)
@@ -11,7 +11,7 @@ DNS protocol: on UDP.
 - ID #: to match query & response, and make it hard for off-path attackers
 - question section, answer section (if response)
 - if no answer, authority section = ask this guy next. if answer found, authority section = guy who provided answer
-- additional section = the guy's IP + other IP addr to cache.
+- additional section = authority section guy's IP + other IP addr to cache.
 
 cache poisoning: malicious DNS server puts wrong stuff in additional section about totally unrelated domains. we cache it. soln: don't except additional section stuff unless they're for the domain we're looking up.
 

@@ -9,4 +9,4 @@ DNSSEC:
 - if name $n$ not found in domain, DNS server should respond with the two valid names that $n$ lies in between (alphabetical order) and sign it. (this way, server can precompute all signatures it might need to send, and not have to sign on the fly)
 - resolver returns appropriate responses + signatures
 
-DNSSEC: partial deployment
+DNSSEC weakness: partial deployment
