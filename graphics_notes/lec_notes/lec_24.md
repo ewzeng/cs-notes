@@ -23,3 +23,5 @@ fundamental problem of simulation: instability (blow up)
 to combat instability: modified euler (avg start and end velocity), adaptive step size (reduce step size until reducing more doesn't help accuracy), implicit euler (great but very complicated, solve for future derivatives), verlet integration (project 4!)
 
 - verlet integration: after modified euler, constrain positions of particles (will dissipate energy $\rightarrow$ stabilize). fast, simple, but not physically based
+
+if you think about it, particle simulation is just numerically solving ODEs, so can be generalized to studying flocks of birds, crowds, etc.
