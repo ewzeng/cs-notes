@@ -12,6 +12,6 @@ filtering connection for a bad keyword not so easy! can split keyword across mul
 
 application-level firewall: firewall acts as proxy (client $\rightarrow$ server TCP connection becomes 2 TCP connections: client $\rightarrow$ firewall, firewall $\rightarrow$ server). defends against TTL attack
 
-VPN = a way for outside users to authenticate themselves and tunnel past the firewall, as if they were internal users (done by connecting to a internal VPN server + authenticating themselves there)
+VPN = a way for outside users to authenticate themselves and tunnel past the firewall, as if they were internal users (done by connecting to a internal VPN server + authenticating themselves there. then do things as if internal users)
 
 common firewall bypass: compromise internal machine, then attack from inside

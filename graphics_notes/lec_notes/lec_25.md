@@ -17,4 +17,4 @@ now: motion capture (realistic, complex, may require alterations if not meeting 
 
 optical motion capture: markers on subject, take videos from multiple cameras, deduce marker position by triangulation, occlusions difficult
 
-facial animation is very hard (uncanny valley - if try to imitate human faces, get negative emotion response, until sufficiently realistic)
+facial animation is very hard (uncanny valley - the closer the imitation, the more negative the emotional response, until sufficiently realistic)
