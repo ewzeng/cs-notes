@@ -4,7 +4,7 @@ often we blame the user (for things like phishing)
 
 - if users fall for it alot, we should redesign the system/interface
 
-cost-benefit analysis ubiquituous security: how much to spend on security? how much are attackers willing to spend to attack me?
+cost-benefit analysis ubiquituous in security: how much to spend on security? how much are attackers willing to spend to attack me?
 
 possible countermeasures:
 

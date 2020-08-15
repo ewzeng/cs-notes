@@ -12,7 +12,7 @@ if alice wants to send money to bob, shes sends and signs (transaction, list of 
 
 now, build the ledger
 
-hashchain: each transaction contains hash of previous transaction (so can verify history by getting lastest hash)
+hashchain: each transaction contains hash of previous transaction (so can verify history by getting latest hash)
 
 blockchain: same as before, but use blocks of transactions instead of a single transaction
 

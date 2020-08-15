@@ -26,3 +26,4 @@ el-gamal pubkey encryption:
 - publish pub key $= g^k \mod p$ and $g$
 - to send msg $m \in [1, p-1]$: pick rand $r \in [1, p-1]$. get pubkey $pk$ and $g$ of recipient. then ciphertext c = ($g^r \mod p$; $m \cdot pk^r \mod p$)
 - decrypt by noticing $(g^r)^k = pk^r$
+
