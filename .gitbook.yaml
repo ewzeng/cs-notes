@@ -1,0 +1,7 @@
+# tell gitbook to only look in "gitbook" folder
+root: ./gitbook/
+
+# set introduction and table of contents files
+structure:
+    readme: README.md
+    summary: SUMMARY.md
