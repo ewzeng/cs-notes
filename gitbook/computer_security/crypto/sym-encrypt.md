@@ -12,7 +12,7 @@ As is common in cryptography, we can mathematically define this goal with a __se
 
 1. There are two people: adversary and challenger.
 2. Challenger calls $$\text{Keygen}()$$ to get key $$K$$.
-3. Adversary queries the challenger for encryptions of all messages of their choosing.
+3. Adversary queries the challenger for encryptions of all messages of the adversary's choosing.
 4. Once ready, the adversary send two messages $$M_1$$, $$M_2$$ of the same length.
 5. Challenger sends the encryptions $$E_1$$, $$E_2$$ back. However, the challenger does not tell the adversary which encryption corresponds to which message.
 6. The adversary can further query the challenger for encryptions.

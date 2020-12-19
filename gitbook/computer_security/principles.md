@@ -1,7 +1,5 @@
 # Security Principles
 
-In this section, we present some high-level security principles.
-
 Systems are almost surely __not secure__ against an attacker with enough resources and money. Thus, we do not ask "is this system secure?" Instead, we ask "is this system secure against those who want to attack it?" This is the question of __reasonable security__.
 
 In general, there are three possible ways to defend against attacks:
