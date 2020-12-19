@@ -31,6 +31,6 @@ However, there are clever ways to get around this.
 
 ## ASLR
 
-ASLR stands for address space layout randomization. The idea is that randomize the starting points of the stack, heap, and code. This way, even if the attacker is able to introduce malicious code into memory, the attacker might not know where the malicious code is. This prevents ROP and return-into-libc attacks.
+ASLR stands for __address space layout randomization__. The idea is that randomize the starting points of the stack, heap, and code. This way, even if the attacker is able to introduce malicious code into memory, the attacker might not know where the malicious code is. This prevents ROP and return-into-libc attacks.
 
-In fact, the current state-of-art defense (implemented by all major operating systems) is ASLR with W^X. Attacking such systems often require first finding a vulnerability that leaks information about addresses, and then doing a ROP attack. (For more information of bypassing ASLR, see the paper *ASLR Smack & Laugh Reference* by Tilo Muller.)
+In fact, the current state-of-art defense (implemented by all major operating systems) is ASLR with W^X. Attacking such systems often require first finding a vulnerability that leaks information about addresses, and then doing a ROP attack. (For more information, see the paper *ASLR Smack & Laugh Reference* by Tilo Muller.)

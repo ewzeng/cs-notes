@@ -6,3 +6,4 @@
       * [Buffer Overflow Attacks](computer_security/mem/buffer-overflow.md)
       * [Buffer Overflow Defenses](computer_security/mem/buffer-overflow-defense.md)
     * [Cryptography](computer_security/crypto/README.md)
+      * [Symmetric-Key Encryption](computer_security/crypto/sym-encrypt.md)
