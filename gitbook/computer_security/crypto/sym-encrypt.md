@@ -20,5 +20,5 @@ As is common in cryptography, we can mathematically define this goal with a **se
 
 Notice that any symmetric-key encryption that is IND-CPA secure must be non-deterministic! Otherwise, the adversary could query the challenger for the encryptions of $$M_1$$ and $$M_2$$, and use that to pick the correct guess.
 
-In the next section, we will see how to build a symmetric-key encryption scheme from **block ciphers**.
+In the next section, we will see how to build a secure symmetric-key encryption scheme from **block ciphers**.
 
