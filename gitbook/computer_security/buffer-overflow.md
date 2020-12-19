@@ -27,7 +27,7 @@ This code is vulerable because of a particular feature of `printf`. That is,
 ```
 printf("%s");
 ```
-will print the string found at the address `*(esp - 4)`. Thus, if the attacker can manipulate the word right below `esp`, they will be able to read anywhere in memory. (And using `"%n"`, can also write anywhere in memory). The way to prevent format string vulnerabilities is to use `printf` like so:
+will print the string found at the address `*(esp - 4)`. Thus, if the attacker can manipulate the word right below `esp` and then input `%s` to the program, they will be able to read anywhere in memory. (And using `%n`, can also write anywhere in memory). The way to prevent format string vulnerabilities is to use `printf` like so:
 ```
 printf("%s", "/* Get input string from user */");
 ```
