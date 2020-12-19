@@ -47,7 +47,7 @@ What if the message `M` is not a multiple of 128-bits? The solution is to pad `M
 
 A pseudo-random generator is a generator that takes a short random input seed \(say 256 bits\) and outputs a huge number of pseudorandom bits \(usually millions\). We say a pseudo-random generator is secure if an attacker cannot differentiate between a pseudorandom sequence and an actual random sequence \(once again, we can define a security game to make this rigorous\).
 
-We can create a secure pseudo-random generator by using the first half of the input seed as the key `K` and the second half as the nonce `N`, and then creating the stream:
+We can create a secure pseudo-random generator by using the first half of the input seed as the key `K` and the second half as the nonce `N`, and then create the stream:
 
 $$
 \text{Enc}(K, N | 1) | \text{Enc}(K, N | 2) | \dots

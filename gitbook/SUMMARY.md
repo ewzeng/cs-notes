@@ -9,4 +9,5 @@
   * [Cryptography](computer_security/crypto/README.md)
     * [Symmetric-Key Encryption](computer_security/crypto/sym-encrypt.md)
     * [Symmetric-Key Encryption II](computer_security/crypto/sym-encrypt-2.md)
+    * [Asymmetric-Key Encryption](computer_security/crypto/asym-encrypt.md)
 
