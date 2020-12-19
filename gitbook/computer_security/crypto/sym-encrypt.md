@@ -6,7 +6,7 @@ __Symmetric-key encryption__ consists of three functions:
 - $$E = \text{Enc(K, M)}$$ encrypts a message $$M$$ with key $$K$$
 - $$M = \text{Dec(K, E)}$$ decrypts an encrypted message $$E$$ with key $$K$$
 
-The goal of symmetric-key encryption is hide all information about message $$M$$. That is, an attacker that has the encryption $$E$$ cannot obtain __any__ information about $$M$$ (excepting possibility the length of $$M$$).
+The goal of symmetric-key encryption is hide all information about message $$M$$. That is, an attacker that has the encryption $$E$$ cannot obtain __any__ information about $$M$$ (excepting possibly the length of $$M$$).
 
 As is common in cryptography, we can mathematically define this goal with a __security game__:
 
