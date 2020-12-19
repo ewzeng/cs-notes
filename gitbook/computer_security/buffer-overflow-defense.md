@@ -20,7 +20,7 @@ Stack canaries make it more difficult for stack smashing, but is a weak defense 
 - Attackers can buffer overflow in the heap, or overwrite other stuff in stack
 - If the canary is 4 bytes, the attacker can try to brute-force guess the canary (the last byte of the canary is always a null terminator to defend against `strcpy` attacks)
 
-## Non-executable Pages (N^X)
+## Non-Executable Pages (W^X)
 
 Another defense against buffer overflows is to mark all writeable pages as non-executable. (This implemented in the page table). This way, the attacker cannot introduce malicious code into the system and execute that code (via stack smashing, for example).
 
@@ -33,4 +33,4 @@ However, there are clever ways to get around this.
 
 ASLR stands for address space layout randomization. The idea is that randomize the starting points of the stack, heap, and code. This way, even if the attacker is able to introduce malicious code into memory, the attacker might not know where the malicious code is. This prevents ROP and return-into-libc attacks.
 
-In fact, the current state-of-art defense (implemented by all major operating systems) is ASLR with N^X. Attacking such systems often require first finding a vulnerability that leaks information about addresses, and then doing a ROP attack. (For more information of bypassing ASLR, see the paper *ASLR Smack & Laugh Reference* by Tilo Muller.)
+In fact, the current state-of-art defense (implemented by all major operating systems) is ASLR with W^X. Attacking such systems often require first finding a vulnerability that leaks information about addresses, and then doing a ROP attack. (For more information of bypassing ASLR, see the paper *ASLR Smack & Laugh Reference* by Tilo Muller.)
