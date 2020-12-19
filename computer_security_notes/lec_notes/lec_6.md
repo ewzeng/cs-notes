@@ -18,7 +18,7 @@ if msg not multiple of 128: padding (but be careful!)
 
 - one way is to always pad with 10...0 (and if we are multiple of 128, add an extra block of 10...0)
 
-IND-NPA guarantees even if part of plaintext is known, still can't decrypt the rest
+IND-CPA guarantees even if part of plaintext is known, still can't decrypt the rest
 
 pseudo-rand generator:
 
