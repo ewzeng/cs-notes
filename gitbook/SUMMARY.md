@@ -2,6 +2,6 @@
 
 * [Computer Security](computer_security/README.md)
     * [Security Principles](computer_security/principles.md)
-    * Memory Attacks
+    * [Memory Attacks](computer_security/mem/README.md)
       * [Buffer Overflow Attacks](computer_security/mem/buffer-overflow.md)
       * [Buffer Overflow Defenses](computer_security/mem/buffer-overflow-defense.md)
