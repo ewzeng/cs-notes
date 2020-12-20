@@ -10,7 +10,7 @@ The advantage of asymmetric-key encryption is that no key-sharing is needed to c
 
 We say that an asymmetric-key encryption scheme is IND-CPA secure if attackers cannot distinguish between the encryptions of two equal length messages of their choosing. The security game corresponding to definition is the same as the security game for symmetric-key encryption schemes, except there is no query phase (as the attacker can encrypt messages themselves).
 
-Two popular asymmetric-key encryption schemes are El Gamal and RSA. We will go over El Gamal because it is conceptually simpler and carries parallels with Diffie-Hellman. (Remark: regular RSA taught in number theory classes is deterministic. To make RSA IND-CPA secure, one must introduce some tweaks.)
+Two popular asymmetric-key encryption schemes are El Gamal and RSA. These two encryption schemes are IND-CPA secure assuming the discrete logarithm and prime factorization are NP-hard problems. We will go over El Gamal because it is conceptually simpler and carries parallels with Diffie-Hellman. (Remark: regular RSA taught in number theory classes is deterministic. To make RSA IND-CPA secure, one must introduce some tweaks.)
 
 ## El Gamal Public Key Encryption
 
