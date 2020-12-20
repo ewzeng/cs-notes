@@ -9,5 +9,6 @@
   * [Cryptography](computer_security/crypto/README.md)
     * [Symmetric-Key Encryption](computer_security/crypto/sym-encrypt.md)
     * [Symmetric-Key Encryption II](computer_security/crypto/sym-encrypt-2.md)
+    * [Diffie-Hellman Key Exchange](computer_security/crypto/d-h.md)
     * [Asymmetric-Key Encryption](computer_security/crypto/asym-encrypt.md)
 
