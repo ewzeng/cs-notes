@@ -1,11 +1,11 @@
-# Hash Functions
+# Cryptographic Hash Functions
 
 We have seen how cryptography can be used to ensure confidentiality of messages. Now we will look at how cryptography can ensure integrity and authenticity of messages.
 
 - __Integrity__: a message has not been tampered with
 - __Authenticity__: a message has not been tampered with and the author of the message can be verified
 
-But before we get into integrity and authenticity, we first must discuss hash functions.
+But before we get into integrity and authenticity, we first must discuss cryptographic hash functions.
 
 ## Cryptographic Hash Functions
 
