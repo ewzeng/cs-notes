@@ -6,28 +6,31 @@ The most common IND-CPA secure symmetric-key encryption schemes are built with *
 
 A block cipher consists of two functions:
 
-* `E = Enc(K, M)`, where `K` is `k`-bits, and `E` and `M` are both `n`-bits \(`n` is the **block size**\)
+* `E = Enc(K, M)`, where key `K` is any `k`-bit string, and `E` and `M` are both `n`-bits \(`n` is the **block size**\)
 * `K = Dec(K, E)`, the inverse function of `Enc`
 
-In other words, a block cipher is a key-dependent permutation on `n`-bit messages. We say that a block cipher is secure if an attacker cannot differentiable between `Enc(K, _)` for a randomly chosen `K` and a random permutation. Like before, this can be expressed more formally with a security game.
+In other words, a block cipher is a key-dependent permutation on `n`-bit strings. We say that a block cipher is secure if a (polynomial-time) attacker cannot differentiable between `Enc(K, _)` for a randomly chosen `K` and a random permutation. Like before, this can be expressed more formally with a security game.
 
-No one has ever proven any block cipher to be secure \(if fact, such a proof would probably lead to a proof of P!=NP\). However, we can try our best to create one. In the 2000s, the US Government organized a competition for the best block ciphers designs. Of the fifteen designs, the block cipher **AES** was chosen. AES is still the block cipher standard and is believed to be secure.
+No one has ever proven any block cipher to be secure \(if fact, such a proof would lead to a proof of P!=NP\). However, there are block ciphers we **believe** are secure. The US government uses the block cipher called **Advanced Encryption Standard (AES)**.
 
-* Professor Wagner, who often teaches CS161, developed the TwoFish block cipher that was a finalist in this block cipher competition.
+* The block cipher design of AES was picked in a national contest during the early 2000s. Professor Wagner, who often teaches CS161, developed the TwoFish block cipher that was a finalist in this competition.
 
 ## Using Block Ciphers for Symmetric-Key Encryption
 
-Let's build an IND-CPA secure symmetric encryption scheme. For simplicity, we will use the simplest version of AES which has 128-bit keys and a 128-bit block size. Suppose we want to encrypt a message `M` whose length is a multiple of 128. How do we do this?
+Let's build an IND-CPA secure symmetric-key encryption scheme using AES. For simplicity, we will use the simplest version of AES which has 128-bit keys and a 128-bit block size. Suppose we want to encrypt a message `M` whose length is a multiple of 128. How do we do this?
 
 ### AES-ECB
 
-The simplest way would be to randomly choose a `k`-bit string and let that be the key `K`. To encrypt, we chunk `M` into 128-bit blocks, and to each block, apply `Enc(K, _)`. To decrypt, we do the same thing, but with `Dec(K, _)`.
+The naive idea would be to randomly chose key `K` and do the following encryption scheme:
 
-However, the symmetric encryption produced would be deterministic, which means it would not be IND-CPA. We will need to do better than this.
+- To encrypt: we chunk `M` into 128-bit blocks, and to each block, apply `Enc(K, _)`. 
+- To decrypt, we do the same thing, but with `Dec(K, _)`.
+
+However, the encryption produced by this scheme would be deterministic, which means it is not IND-CPA. We will need to do better than this.
 
 ### AES-CTR
 
-In AES-CTR, we chose `K` as before, but we also chose a random 64-bit string `N` \(called the **nonce**\). To encrypt, we chunk `M` into 128-bit blocks, and XOR the `m`-th block with `Enc(K, N | m)`. That is, we represent `m` as a 64-bit string, concatenate `N` with `m`, apply AES to the resulting string, and XOR the result with the `m`-block. Then we append `N` to the beginning of our message.
+In AES-CTR, we randomly chose both a key `K` and a 64-bit string `N` \(called the **nonce**\). To encrypt, we chunk `M` into 128-bit blocks, and XOR the `m`-th block with `Enc(K, N | m)`. (That is, we represent `m` as a 64-bit string, concatenate `N` with `m`, apply AES to the resulting string, and XOR the result with the `m`-th block.) Then we append `N` to the beginning of the encryption.
 
 To decrypt, we remove the nonce `N` from the beginning of the message and then use `N` and key `K` to undo the XOR. \(More specifically, we once again XOR the `m`-th block with `Enc(K, N | m)`. Double XORs cancel each other out.\)
 
