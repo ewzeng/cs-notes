@@ -30,5 +30,5 @@ El Gamal then works like this:
 
 Because asymmetric-key encryption is a lot slower than symmetric-key encryption, people often use asymmetric-key encryption to send a symmetric key `K`, and then use symmetric-key encryption with `K` to communicate.
 
-This **hybrid encryption** method usually used when Diffie-Hellman is not applicable, i.e. when the reciever is not online at the moment (D-H requries both parties to be online as the shared symmetric key is determined with inputs from both parties).
+This **hybrid encryption** method usually used when Diffie-Hellman is not applicable, i.e. when the reciever is not online at the moment \(D-H requries both parties to be online as the shared symmetric key is determined with inputs from both parties\).
 
