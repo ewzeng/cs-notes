@@ -26,3 +26,9 @@ El Gamal then works like this:
 * To encrypt message `0 < M < p`, pick a random `0 < R < p`. Get `PK = (g^SK mod p, g)` of the recipient. Then the ciphertext is the pair `E = (g^R mod p, m * PK^R mod p)`
 * To decrypt, notice that `(g^R)^SK = PK^R mod p`. Do a \(modulo\) division to get `m`.
 
+## Hybrid Encryption
+
+Because asymmetric-key encryption is a lot slower than symmetric-key encryption, people often use asymmetric-key encryption to send a symmetric key `K`, and then use symmetric-key encryption with `K` to communicate.
+
+This **hybrid encryption** method usually used when Diffie-Hellman is not applicable, i.e. when the reciever is not online at the moment (D-H requries both parties to be online as the shared symmetric key is determined with inputs from both parties).
+

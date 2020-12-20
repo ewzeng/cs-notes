@@ -11,4 +11,7 @@
     * [Symmetric-Key Encryption II](computer_security/crypto/sym-encrypt-2.md)
     * [Diffie-Hellman Key Exchange](computer_security/crypto/d-h.md)
     * [Asymmetric-Key Encryption](computer_security/crypto/asym-encrypt.md)
+    * [Hash Functions](computer_security/crypto/hash.md)
+    * [MACs](computer_security/crypto/mac.md)
+    * [Digital Signatures](computer_security/crypto/ds.md)
 
