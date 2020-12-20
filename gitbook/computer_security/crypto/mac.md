@@ -8,7 +8,7 @@ We say that a MAC is secure if attackers cannot forge the MAC of some message \(
 
 One way to build a MAC is to chain a bunch of AES block ciphers together, like so: 
 
-![Image from official CS161 Lecture Notes](../../.gitbook/assets/aes-emac.png)
+![Image from Official CS161 Lecture Notes](../../.gitbook/assets/aes-emac.png)
 
 Here, the key `K` for the MAC is the pair `(K_1, K_2)`. This MAC is called **AES-EMAC**. AES-EMAC is a secure MAC assuming that AES is a secure block cipher.
 
@@ -20,7 +20,10 @@ $$
 
 Here, `opad` and `ipad` are different block-sized constants. MACs built in this manner are called HMACs. HMACs have the additional property that they are preimage and collision-resistant even if the attacker has the key `K` \(not hard to show assuming `H` is a cryptographic hash\). Thus, HMACs fully live up to name "keyed hash functions."
 
-{% hint style="info" %}
-MACs are not IND-CPA secure. That is, they can leak partial information. Therefore, if one is doing encryption, one should apply the MAC to the ciphertext, not the plaintext.
-{% endhint %}
+## Best Practices
+
+When using MACs along with symmetric-key encryption, note the following:
+
+- MACs are not IND-CPA secure. That is, they can leak partial information. Therefore, one should apply the MAC to the ciphertext, not the plaintext.
+- Use different keys for encryption and MAC. This is because the security of encryption and MACs are proven independently. Inteplay is not considered.
 
