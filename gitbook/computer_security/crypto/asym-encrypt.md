@@ -8,9 +8,9 @@
 
 The advantage of asymmetric-key encryption is that no key-sharing is needed to communicate. All that is needed to send an encrypted message to someone is their public key `PK`. However, as only the recipient has `SK`, only the recipient can decrypt the message.
 
-We say that an asymmetric-key encryption scheme is IND-CPA secure if attackers cannot distinguish between the encryptions of two equal length messages of their choosing. The security game corresponding to definition is the same as the security game for symmetric-key encryption schemes, except there is no query phase (as the attacker can encrypt messages themselves).
+We say that an asymmetric-key encryption scheme is IND-CPA secure if attackers cannot distinguish between the encryptions of two equal length messages of their choosing. The security game corresponding to this definition is the same as the security game for symmetric-key encryption schemes, except there is no query phase \(as the adversary can encrypt messages themself\).
 
-Two popular asymmetric-key encryption schemes are El Gamal and RSA. These two encryption schemes are IND-CPA secure assuming the discrete logarithm and prime factorization are NP-hard problems. We will go over El Gamal because it is conceptually simpler and carries parallels with Diffie-Hellman. (Remark: regular RSA taught in number theory classes is deterministic. To make RSA IND-CPA secure, one must introduce some tweaks.)
+Two popular asymmetric-key encryption schemes are El Gamal and RSA. These two encryption schemes are IND-CPA secure assuming the discrete logarithm and prime factorization are NP-hard problems, respectively. We will go over El Gamal because it is conceptually simpler and carries parallels with Diffie-Hellman. \(Remark: regular RSA taught in number theory classes is deterministic. To make RSA IND-CPA secure, one must introduce some tweaks.\)
 
 ## El Gamal Public Key Encryption
 
@@ -24,4 +24,5 @@ To generate keys, do the following:
 El Gamal then works like this:
 
 * To encrypt message `0 < M < p`, pick a random `0 < R < p`. Get `PK = (g^SK mod p, g)` of the recipient. Then the ciphertext is the pair `E = (g^R mod p, m * PK^R mod p)`
-* To decrypt, notice that `(g^R)^SK = PK^R mod p`. Do a (modulo) division to get `m`.
+* To decrypt, notice that `(g^R)^SK = PK^R mod p`. Do a \(modulo\) division to get `m`.
+

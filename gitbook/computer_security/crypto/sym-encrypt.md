@@ -6,7 +6,7 @@
 * `E = Enc(K, M)` encrypts a message `M` with key `K`
 * `M = Dec(K, E)` decrypts an encrypted message `E` with key `K`
 
-The goal of symmetric-key encryption is to hide all information about message `M`. That is, an attacker that has the encryption `E` cannot obtain **any** information about `M` \(excepting possibly the length of `M`\).
+The goal of symmetric-key encryption is to encrypt messages in such a way that no partial information is leaked. That is, an attacker that has the encryption `E` cannot obtain **any** information about the message `M` \(excepting possibly the length of `M`\).
 
 As is common in cryptography, we can mathematically define this goal with a **security game**:
 
