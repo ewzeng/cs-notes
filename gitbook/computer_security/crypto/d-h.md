@@ -1,6 +1,6 @@
 # Diffie-Hellman Key Exchange
 
-Communicating with symmetric-key encryption only works if both parties have the same key. Thus, a secure method to agree on a symmetric key is very important. We will look at an algorithm that does exactly this: the **Diffie-Hellman key exchange*.
+Communicating with symmetric-key encryption only works if both parties have the same key. Thus, a secure method to agree on a symmetric key is very important. We will look at an algorithm that does exactly this: the **Diffie-Hellman key exchange**.
 
 In the Diffie-Hellman key exchange, there a large prime `p` and value `1 < g < p` that is public.
 
