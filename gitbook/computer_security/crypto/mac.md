@@ -20,3 +20,7 @@ $$
 
 Here, `opad` and `ipad` are different block-sized constants. MACs built in this manner are called HMACs. HMACs have the additional property that they are preimage and collision-resistant even if the attacker has the key `K` \(not hard to show assuming `H` is a cryptographic hash\). Thus, HMACs fully live up to name "keyed hash functions."
 
+{% hint style="info" %}
+MACs are not IND-CPA secure. That is, they can leak partial information. Therefore, if one is doing encryption, one should apply the MAC to the ciphertext, not the plaintext.
+{% endhint %}
+
