@@ -15,5 +15,6 @@
     * [MACs](computer_security/crypto/mac.md)
     * [Digital Signatures](computer_security/crypto/ds.md)
   * [Network Security](computer_security/networks/README.md)
+    * [The Internet](computer_security/networks/internet.md)
   * [Web Security](computer_security/web/README.md)
 
