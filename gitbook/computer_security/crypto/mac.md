@@ -6,7 +6,7 @@ We say that a MAC is secure if attackers cannot forge the MAC of some message \(
 
 ## Building Secure MACs
 
-One way to build a MAC is to chain a bunch of AES block ciphers together, like so: 
+One way to build a MAC is to chain a bunch of AES block ciphers together, like so:
 
 ![Image from Official CS161 Lecture Notes](../../.gitbook/assets/aes-emac.png)
 
@@ -24,6 +24,6 @@ Here, `opad` and `ipad` are different block-sized constants. MACs built in this 
 
 When using MACs along with symmetric-key encryption, note the following:
 
-- MACs are not IND-CPA secure. That is, they can leak partial information. Therefore, one should apply the MAC to the ciphertext, not the plaintext.
-- Use different keys for encryption and MAC. This is because the security of encryption and MACs are proven independently. Inteplay is not considered.
+* MACs are not IND-CPA secure. That is, they can leak partial information. Therefore, one should apply the MAC to the ciphertext, not the plaintext.
+* Use different keys for encryption and MAC. This is because the security of encryption and MACs are proven independently. Inteplay is not considered.
 
