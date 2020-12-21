@@ -17,5 +17,6 @@
   * [Network Security](computer_security/networks/README.md)
     * [The Internet](computer_security/networks/internet.md)
     * [Basic Network Attacks](computer_security/networks/basic-network-attacks.md)
+    * [TLS](computer_security/networks/tls.md)
   * [Web Security](computer_security/web.md)
 

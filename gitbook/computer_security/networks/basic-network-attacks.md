@@ -16,4 +16,4 @@ On the other hand, on-path attackers are extremely powerful because they can eav
 
 * When on-path attackers spoof packets, it becomes a race which packet (real or spoofed) arrives at the reciever first.
 
-Another vulnerability are **DHCP attacks**, where a malicoius DHCP races a real DHCP to give a bad DNS server and gateway router.
+Another common network attack are **DHCP attacks**, where a malicoius DHCP races a real DHCP to give a bad DNS server and gateway router.
