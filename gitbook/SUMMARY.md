@@ -19,5 +19,11 @@
     * [The Internet](computer_security/networks/internet.md)
     * [Basic Network Attacks](computer_security/networks/basic-network-attacks.md)
     * [TLS](computer_security/networks/tls.md)
-  * [Web Security](computer_security/web.md)
+    * [DNS](computer_security/networks/dns.md)
+    * [DNSSEC](computer_security/networks/dnssec.md)
+    * [Denial of Service](computer_security/networks/dos.md)
+    * [Firewalls](computer_security/networks/firewalls.md)
+  * [Web Security](computer_security/web/README.md)
+  * [Intrusion Detection](computer_security/detection.md)
+  * [Anonymity](computer_security/anonymity.md)
 
