@@ -14,6 +14,7 @@
     * [Hash Functions](computer_security/crypto/hash.md)
     * [MACs](computer_security/crypto/mac.md)
     * [Digital Signatures](computer_security/crypto/ds.md)
+    * [Public-Key Storage](computer_security/crypto/pk-storage.md)
   * [Network Security](computer_security/networks/README.md)
     * [The Internet](computer_security/networks/internet.md)
     * [Basic Network Attacks](computer_security/networks/basic-network-attacks.md)
