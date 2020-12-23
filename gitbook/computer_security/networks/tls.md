@@ -19,7 +19,7 @@ the TCP connection, the following occurs:
 4. **A** and **B** exchange MACs computer on the dialog so far. This allows each to confirm the other has the right keys, and makes sure there is no MITM attacker.
 5. All subsequent communication is encrypted and MAC'ed with the keys generated. Sequence #'s are included in messages to prevent replay attacks.
 
-## Obvervations
+## Observations
 
 TLS ensures that **A** knows she is talking to **B** without any MITM
 attacker, and thus any possibility of an on-path attack. With TLS,
@@ -27,8 +27,8 @@ however, **B** does not who he is talking to: all **B** knows is that
 he is talking to someone. But as **B** is the server, **B** doesn't
 really care.
 
-* If **B** needs to idepntify the user of **A** (say **B** is a web
-  server that stores senstivive information), then **B** could make
+* If **B** needs to identify the user of **A** (say **B** is a web
+  server that stores sensitive information), then **B** could make
   the user of **A** login to an account.
 
 The reason `R_A` and `R_B` are used is to prevent attackers from
