@@ -27,9 +27,7 @@ however, **B** does not who he is talking to: all **B** knows is that
 he is talking to someone. But as **B** is the server, **B** doesn't
 really care.
 
-* If **B** needs to identify the user of **A** (say **B** is a web
-  server that stores sensitive information), then **B** could make
-  the user of **A** login to an account.
+* If **B** needs to identify the user of **A** (say **B** is a web server that stores sensitive information), then **B** could make the user of **A** login to an account.
 
 The reason `R_A` and `R_B` are used is to prevent attackers from
 recording and replaying messages to either the server or the computer
