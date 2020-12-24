@@ -11,7 +11,7 @@ no MiTM attacker?
 The solution is to use digital certificates. A digital certificate for
 a website is the tuple:
 $$
-(M, sign(SK_{CA}, M))
+(M, \text{sign}(SK_{CA}, M))
 $$
 where `M` is the message `[Website]'s PK is ... Certificate expiration
 date is ...` and `SK_CA` is the secret key of a trusted certificate
