@@ -30,4 +30,11 @@ modes, possibly have some different key-bindings and different
 features.
 
 Every window has a status bar at the bottom, telling the mode of the
-buffer the window is viewing (as well as the position of the cursor).
+buffer the window is viewing (as well as the position of the cursor
+and other infomation). The status bar is also called the mode line.
+
+## Elisp
+
+Emacs = Elisp interpreter written in C + editor written in Elisp.
+Thus, by programming in Elisp, we can virtually change anything about
+the editing functionality which is extremely powerful.
